@@ -9,5 +9,6 @@ data class Election(
         @PrimaryKey val id: Int,
         @ColumnInfo(name = "name")val name: String,
         @ColumnInfo(name = "electionDay")val electionDay: Date,
+        @ColumnInfo(name = "isFollowed")val isFollowed: Boolean,
         @Embedded(prefix = "division_") @Json(name="ocdDivisionId") val division: Division
 )

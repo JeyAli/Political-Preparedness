@@ -39,10 +39,11 @@ interface CivicsApiService {
     fun getElections(): Deferred<ElectionResponse>;
 
     @GET("/voterinfo")
-    fun getVoterInfo(@Query("address") address: String): Deferred<VoterInfoResponse>;
+    fun getVoterInfo(@Query("address") address: String,
+                     @Query("electionId") electionId: Int): Deferred<VoterInfoResponse>;
 
-    @GET("/representatives/{ocdId}")
-    fun getRepresentatives(@Path("ocdId") ocdId: String): Deferred<RepresentativeResponse>;
+    @GET("/representatives")
+    fun getRepresentatives(@Query("address") address: String): Deferred<RepresentativeResponse>;
 }
 
 object CivicsApi {
