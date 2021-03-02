@@ -1,13 +1,15 @@
 package com.example.android.politicalpreparedness.election
 
+import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.android.politicalpreparedness.data.CivicsDataSource
 
-//DONE: Create Factory to generate ElectionViewModel with provided election datasource
-class ElectionsViewModelFactory(val arg: CivicsDataSource): ViewModelProvider.Factory {
+class ElectionsViewModelFactory(val app: Application) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return modelClass.getConstructor(CivicsDataSource::class.java)
-            .newInstance(arg)
+        if (modelClass.isAssignableFrom(ElectionsViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return ElectionsViewModel(app) as T
+        }
+        throw IllegalArgumentException("Unable to construct viewmodel")
     }
 }

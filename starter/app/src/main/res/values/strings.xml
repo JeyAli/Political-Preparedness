@@ -9,8 +9,13 @@
     <string name="election_information">Election Information</string>
     <string name="ballot_information">Ballot Information</string>
     <string name="representative_search">Representative Search</string>
-    <string name="find_my_location">Find My Location</string>
+    <string name="find_my_location">Use My Location</string>
     <string name="my_representatives">My representatives</string>
+    <string name="correspondence_address">Correspondence Address</string>
+    <string name="address_not_found">Address not available</string>
+
+
+
 
 
 

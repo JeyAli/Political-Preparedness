@@ -9,10 +9,10 @@ import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterF
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.Deferred
+import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 private const val BASE_URL = "https://www.googleapis.com/civicinfo/v2/"
@@ -35,14 +35,14 @@ private val retrofit = Retrofit.Builder()
  */
 
 interface CivicsApiService {
-    @GET("/elections")
-    fun getElections(): Deferred<ElectionResponse>;
+    @GET("elections")
+    fun getElections(): Call<ElectionResponse>;
 
-    @GET("/voterinfo")
+    @GET("voterinfo")
     fun getVoterInfo(@Query("address") address: String,
                      @Query("electionId") electionId: Int): Deferred<VoterInfoResponse>;
 
-    @GET("/representatives")
+    @GET("representatives")
     fun getRepresentatives(@Query("address") address: String): Deferred<RepresentativeResponse>;
 }
 

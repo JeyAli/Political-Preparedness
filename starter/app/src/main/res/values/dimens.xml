@@ -2,5 +2,10 @@
 <resources>
     <dimen name="default_padding">8dp</dimen>
     <dimen name="default_margin">12dp</dimen>
+    <dimen name="layout_hight">90dp</dimen>
+    <dimen name="representative_pic_dimens">55dp</dimen>
+    <dimen name="icon_dimens">24dp</dimen>
+
+
 
 </resources>

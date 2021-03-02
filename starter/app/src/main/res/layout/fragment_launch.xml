@@ -16,7 +16,6 @@
             android:gravity="center"
             android:src="@drawable/ballot_logo"
             app:iconPadding="@dimen/default_padding"
-            app:layoutDescription="Ballot picture"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +30,7 @@
             android:shadowColor="@color/white"
             android:text="@string/upcoming_elections"
             android:textAllCaps="true"
+            android:layout_marginTop="@dimen/default_margin"
             app:layout_constraintBottom_toTopOf="@+id/button_representatives"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -40,6 +40,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:shadowColor="@color/white"
+            android:layout_marginBottom="@dimen/default_margin"
             android:text="@string/find_my_representatives"
             android:textAllCaps="true"
             app:layout_constraintBottom_toBottomOf="parent"

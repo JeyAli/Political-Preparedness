@@ -1,9 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-common-ktx:2.2.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af5f4de15d09d65c6d4aa25e1ffbaa55/navigation-common-ktx-2.2.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af5f4de15d09d65c6d4aa25e1ffbaa55/navigation-common-ktx-2.2.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af5f4de15d09d65c6d4aa25e1ffbaa55/navigation-common-ktx-2.2.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/22d11f21be13a73aa8e8514610d72fd5/navigation-common-ktx-2.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af4e0c796787f1e5850dd973531253c7/navigation-common-ktx-2.2.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5869192b83b615fa1be51deb7c9587b/navigation-common-ktx-2.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5869192b83b615fa1be51deb7c9587b/navigation-common-ktx-2.2.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e5869192b83b615fa1be51deb7c9587b/navigation-common-ktx-2.2.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

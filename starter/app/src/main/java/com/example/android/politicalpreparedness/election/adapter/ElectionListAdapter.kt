@@ -1,23 +1,57 @@
 package com.example.android.politicalpreparedness.election.adapter
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.annotation.LayoutRes
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.example.android.politicalpreparedness.databinding.ViewholderElectionBinding
+import androidx.recyclerview.widget.RecyclerView
+import com.example.android.politicalpreparedness.R
+import com.example.android.politicalpreparedness.databinding.ElectionItemBinding
 import com.example.android.politicalpreparedness.network.models.Election
 
 class ElectionListAdapter(private val clickListener: ElectionListener): ListAdapter<Election, ElectionViewHolder>(ElectionDiffCallback()) {
 
+    var electionsList: List<Election> = emptyList()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+
+    override fun getItemCount(): Int = electionsList.size
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ElectionViewHolder {
-        return ElectionViewHolder.from(parent)
+        val binding = ElectionItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ElectionViewHolder(binding)
     }
 
-    //TODO: Bind ViewHolder
-
-    //TODO: Add companion object to inflate ViewHolder (from)
+    override fun onBindViewHolder(holder: ElectionViewHolder, position: Int) {
+        holder.viewDataBinding.also {
+            it.election = electionsList[position]
+            it.electionCallback = clickListener
+        }
+    }
 }
 
-//TODO: Create ElectionViewHolder
+class ElectionViewHolder(val viewDataBinding: ElectionItemBinding) :
+    RecyclerView.ViewHolder(viewDataBinding.root) {
+    companion object {
+        @LayoutRes
+        val LAYOUT = R.layout.election_item
+    }
+}
 
-//TODO: Create ElectionDiffCallback
+class ElectionDiffCallback() : DiffUtil.ItemCallback<Election>() {
+    override fun areItemsTheSame(oldItem: Election, newItem: Election): Boolean {
+        return oldItem.id == newItem.id
+    }
 
-//TODO: Create ElectionListener
+    override fun areContentsTheSame(oldItem: Election, newItem: Election): Boolean {
+        return oldItem == newItem
+    }
+}
+
+class ElectionListener(val block: (Election) -> Unit) {
+    fun onClick(election: Election) = block(election)
+}
+
