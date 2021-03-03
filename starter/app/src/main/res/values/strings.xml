@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Political Preparedness</string>
+    <string name="representatives">Representatives</string>
+    <string name="election_detail">Election detail</string>
+    <string name="elections">Elections</string>
     <string name="upcoming_elections">Upcoming Elections</string>
     <string name="find_my_representatives">Find my representatives</string>
     <string name="saved_elections">Saved Elections</string>
     <string name="follow_election">Follow Election</string>
+    <string name="unfollow_election">Unfollow Election</string>
     <string name="voting_locations">Voting Locations</string>
     <string name="election_information">Election Information</string>
     <string name="ballot_information">Ballot Information</string>

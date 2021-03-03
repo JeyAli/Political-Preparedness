@@ -18,7 +18,6 @@ class ElectionsRepository(private val database: ElectionDatabase) {
     val elections: LiveData<List<Election>> = database.electionDao.getElections()
 
     val voterInfo = MutableLiveData<VoterInfoResponse>()
-    val representatives = MutableLiveData<RepresentativeResponse>()
 
     suspend fun updateElections() {
         try {

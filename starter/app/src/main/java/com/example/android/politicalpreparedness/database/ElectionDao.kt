@@ -10,7 +10,7 @@ interface ElectionDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertElection(election: Election): Long
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertElections(elections: List<Election>)
 
     @Query("SELECT * FROM election_table")

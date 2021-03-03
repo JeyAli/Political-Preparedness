@@ -19,3 +19,5 @@ class ElectionsViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch { electionsRepository.updateElections() }
     }
 }
+
+
